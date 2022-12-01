@@ -11,7 +11,6 @@
             get
             {
                 return "mongodb://localhost:27017";
-                //return "mongodb+srv://qhamvi:W4fnTIKr3eO5AEDh@cluster0.vcaxilj.mongodb.net/?retryWrites=true&w=majority"; //--mongo atlas
             }
         }
     }

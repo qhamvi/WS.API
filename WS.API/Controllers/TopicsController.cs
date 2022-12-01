@@ -4,8 +4,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using WS.API.DTOs.Response;
-using WS.API.DTOs.Topic;
+using WS.API.DTO.Response;
+using WS.API.DTO.Topic;
 using WS.API.Extensions;
 using WS.API.Models;
 using WS.API.Service;
@@ -24,13 +24,13 @@ namespace WS.API.Controllers
         }
 
         //GET /topics
-        [HttpGet]
-        public async Task<ActionResult<GetListTopicResponse>> GetTopics(GetListTopicRequest request)
-        {
-            var topics = (await _service.GetTopicsAsync())
-                        .Select(topic => topic.AsTopicDto());
-            return topics;
-        }
+        //[HttpGet]
+        //public async Task<ActionResult<GetListTopicResponse>> GetTopics(GetListTopicRequest request)
+        //{
+        //    var topics = (await _service.GetTopicsAsync())
+        //                .Select(topic => topic.AsTopicDto());
+        //    return topics;
+        //}
 
         //GET /topics/{id}
         [HttpGet("{idTopic}")]

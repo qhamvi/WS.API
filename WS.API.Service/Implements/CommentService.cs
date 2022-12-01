@@ -9,7 +9,7 @@ namespace WS.API.Service.Implements
 {
     public class CommentService : ICommentService
     {
-        private const string databaseName = "webstory2";
+        private const string databaseName = "webstory";
         private const string collectionName = "comments";
         private readonly IMongoCollection<Comment> _commentsCollection;
         private readonly FilterDefinitionBuilder<Comment> _filterBuilder = new ();

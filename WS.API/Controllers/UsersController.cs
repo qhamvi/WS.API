@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
-using WS.API.DTOs.User;
+using WS.API.DTO.User;
 using WS.API.Extensions;
 using WS.API.Models;
 using WS.API.Service.Implements;

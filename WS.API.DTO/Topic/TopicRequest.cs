@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace WS.API.DTOs.Topic
+namespace WS.API.DTO.Topic
 {
     public record TopicRequest
     {

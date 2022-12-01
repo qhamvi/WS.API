@@ -1,8 +1,9 @@
-﻿using WS.API.DTOs.Comment;
-using WS.API.DTOs.Role;
-using WS.API.DTOs.Story;
-using WS.API.DTOs.Topic;
-using WS.API.DTOs.User;
+﻿using WS.API.DTO.Chapter;
+using WS.API.DTO.Comment;
+using WS.API.DTO.Role;
+using WS.API.DTO.Story;
+using WS.API.DTO.Topic;
+using WS.API.DTO.User;
 using WS.API.Models;
 
 namespace WS.API.Extensions
@@ -75,6 +76,19 @@ namespace WS.API.Extensions
                 Summary = story.Summary,
                 TitleStory = story.TitleStory
             };
+        }
+        public static ChapterResponse AsChapterDto(this Chapter chapter)
+        {
+            return new ChapterResponse()
+            {
+                Id = chapter.Id,
+                Collector = chapter.Collector,
+                Content = chapter.Content,
+                CreateDate = chapter.CreateDate,
+                IdStory = chapter.IdStory,
+                TitleChap = chapter.TitleChap
+            };
+
         }
     }
 }

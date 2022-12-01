@@ -9,7 +9,7 @@ namespace WS.API.Service.Implements
 {
     public class UserService : IUserService
     {
-        private const string _databaseName = "webstory2";
+        private const string _databaseName = "webstory";
         private const string _collectionName = "users";
         private readonly IMongoCollection<User> _usersCollection;
         private readonly FilterDefinitionBuilder<User> _filterBuilder = Builders<User>.Filter;

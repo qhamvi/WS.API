@@ -1,4 +1,4 @@
-﻿namespace WS.API.DTOs.Comment
+﻿namespace WS.API.DTO.Comment
 {
     public class CommentRequest
     {

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace WS.API.DTOs.User
+namespace WS.API.DTO.User
 {
     public record UserResponse
     {

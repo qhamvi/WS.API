@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using WS.API.DTOs.Story;
+using WS.API.DTO.Story;
 using WS.API.Models;
 
 namespace WS.API.Service

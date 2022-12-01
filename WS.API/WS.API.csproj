@@ -23,14 +23,14 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Images\" />
-    <Folder Include="Photos\" />
+    <ProjectReference Include="..\WS.API.DTO\WS.API.DTO.csproj" />
+    <ProjectReference Include="..\WS.API.Models\WS.API.Models.csproj" />
+    <ProjectReference Include="..\WS.API.Service\WS.API.Service.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\WS.API.DTO\WS.API.DTOs.csproj" />
-    <ProjectReference Include="..\WS.API.Models\WS.API.Models.csproj" />
-    <ProjectReference Include="..\WS.API.Service\WS.API.Service.csproj" />
+    <Folder Include="Images\" />
+    <Folder Include="Photos\" />
   </ItemGroup>
 
 </Project>

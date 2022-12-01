@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace WS.API.DTOs.Story
+namespace WS.API.DTO.Story
 {
     public class StoryResponse
     {

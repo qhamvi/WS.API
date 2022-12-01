@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace WS.API.DTOs.Topic
+namespace WS.API.DTO.Topic
 {
     public record TopicResponse
     {

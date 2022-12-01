@@ -3,14 +3,14 @@ using MongoDB.Driver;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using WS.API.DTOs.Role;
+using WS.API.DTO.Role;
 using WS.API.Models;
 
 namespace WS.API.Service.Implements
 {
     public class RoleService : IRolesService
     {
-        private const string _databaseName = "webstory2";
+        private const string _databaseName = "webstory";
         private const string _collectionName = "roles";
         private readonly IMongoCollection<Role> _rolesCollection;
 

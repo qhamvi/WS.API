@@ -1,6 +1,6 @@
 using System;
 using System.Collections.Generic;
-using WS.API.DTOs.Story;
+using WS.API.DTO.Story;
 
 namespace WS.API.Extensions
 {

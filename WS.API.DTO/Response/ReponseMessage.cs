@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace WS.API.DTOs.Response
+namespace WS.API.DTO.Response
 {
     public class ReponseMessage
     {

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WS.API.DTOs.Story
+namespace WS.API.DTO.Story
 {
     public class UpdateChapterStoryRequest
     {

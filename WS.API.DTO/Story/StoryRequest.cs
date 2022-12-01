@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace WS.API.DTOs.Story
+namespace WS.API.DTO.Story
 {
     public class StoryRequest
     {
@@ -17,8 +17,6 @@ namespace WS.API.DTOs.Story
 
         public List<string> ListTopic { get; init; }
         
-        public List<string> ListChap { get; init; }
-
         public bool Complete { get; init; }
 
         public string ImageFileName { get; init; }

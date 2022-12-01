@@ -5,10 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using WS.API.DTO.Response;
 
-namespace WS.API.DTO.Topic
+namespace WS.API.DTO.Chapter
 {
-    public class GetListTopicResponse : ListResponse<TopicResponse>
+    public class ListChapterResponse : ListResponse<ChapterResponse> 
     {
-
     }
 }

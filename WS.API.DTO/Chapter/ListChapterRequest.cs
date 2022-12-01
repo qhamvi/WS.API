@@ -4,10 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WS.API.DTO.Topic
+namespace WS.API.DTO.Chapter
 {
-    public class GetListTopicRequest
+    public class ListChapterRequest
     {
+        public string IdStory { get; set; }
+
         public int Page { get; set; }
 
         public int PageSize { get; set; }
@@ -16,5 +18,6 @@ namespace WS.API.DTO.Topic
 
         public string? Sort { get; set; }
 
+        public string Search { get; set; }
     }
 }

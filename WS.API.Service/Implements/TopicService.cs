@@ -3,14 +3,14 @@ using MongoDB.Driver;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using WS.API.DTOs.Topic;
+using WS.API.DTO.Topic;
 using WS.API.Models;
 
 namespace WS.API.Service.Implements
 {
     public class TopicService : ITopicService
     {
-        private const string _databaseName = "webstory2";
+        private const string _databaseName = "webstory";
         private const string _collectionName = "topics";
         private readonly IMongoCollection<Topic> _topicsCollection;
         
@@ -55,6 +55,11 @@ namespace WS.API.Service.Implements
         public async Task<IEnumerable<Topic>> GetTopicsAsync()
         {
             return await _topicsCollection.Find(new BsonDocument()).ToListAsync();
+        }
+
+        public Task<GetListTopicResponse> GetTopicsAsync(GetListTopicRequest request)
+        {
+            throw new NotImplementedException();
         }
 
         public async Task UpdateTopicAsync(Topic topic)

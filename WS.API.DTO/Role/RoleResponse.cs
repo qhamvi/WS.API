@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace WS.API.DTOs.Role
+namespace WS.API.DTO.Role
 {
     public class RoleResponse 
     {

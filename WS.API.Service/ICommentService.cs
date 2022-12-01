@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using WS.API.DTOs.Comment;
+using WS.API.DTO.Comment;
 using WS.API.Models;
 
 namespace WS.API.Service

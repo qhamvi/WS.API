@@ -1,8 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace WS.API.Models
+namespace WS.API.DTO.Chapter
 {
-    public record Chapter
+    public class ChapterResponse
     {
         public Guid Id { get; init; }
 
@@ -15,6 +19,5 @@ namespace WS.API.Models
         public DateTime CreateDate { get; init; }
 
         public string Content { get; init; }
-
     }
 }

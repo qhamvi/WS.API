@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace WS.API.DTOs.User
+namespace WS.API.DTO.User
 {
     public class UpdateLikeRequest
     {

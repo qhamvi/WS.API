@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace WS.API.DTOs.User
+namespace WS.API.DTO.User
 {
     public class UserRequest
     {

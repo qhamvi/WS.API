@@ -1,7 +1,7 @@
 using System;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using WS.API.DTOs.Story;
+using WS.API.DTO.Story;
 using WS.API.Extensions;
 using WS.API.Service.Implements;
 

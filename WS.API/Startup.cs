@@ -52,6 +52,7 @@ namespace WS.API
             services.AddScoped<CommentService>();
             services.AddScoped<UserService>();
             services.AddScoped<StoryService>();
+            services.AddScoped<ChapterService>();
             
 
             //JSON Serializer
@@ -89,6 +90,7 @@ namespace WS.API
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "WS.API v1"));
             }
+            
             app.UseStatusCodePages(async statusCodeContext =>
             {
                 // using static System.Net.Mime.MediaTypeNames;
@@ -97,7 +99,10 @@ namespace WS.API
                 await statusCodeContext.HttpContext.Response.WriteAsync(
                     $"Status Code Page: {statusCodeContext.HttpContext.Response.StatusCode}");
             });
-            app.UseHttpsRedirection();
+            // if(env.IsDevelopment())
+            // {
+            //     app.UseHttpsRedirection();
+            // }
 
             app.UseRouting();
 

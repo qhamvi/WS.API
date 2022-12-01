@@ -4,17 +4,16 @@ using System.Linq.Expressions;
 using System.Threading.Tasks;
 using MongoDB.Bson;
 using MongoDB.Driver;
-using WS.API.DTOs.Story;
 using WS.API.Models;
 using static WS.API.Extensions.StoryExtension;
 using WS.API.Extensions;
-
+using WS.API.DTO.Story;
 
 namespace WS.API.Service.Implements
 {
     public class StoryService : IStoryService
     {
-        private const string databaseName = "webstory2";
+        private const string databaseName = "webstory";
         private const string collectionName = "stories";
         private readonly IMongoCollection<Story> _storiesCollection;
         private readonly FilterDefinitionBuilder<Story> _filterBuilder = new ();
@@ -37,9 +36,9 @@ namespace WS.API.Service.Implements
                 CreateDate = DateTime.Now,
                 IdCom = null,
                 ImageFileName = request.ImageFileName,
-                ListChap = request.ListChap,
+                //ListChap = request.ListChap,
                 ListTopic = request.ListTopic,
-                NumberChap = request.ListChap != null ? request.ListChap.Count() : 0,
+                NumberChap = 0,
                 PublishDate = null,
                 Status = false,
                 Summary = request.Summary,
