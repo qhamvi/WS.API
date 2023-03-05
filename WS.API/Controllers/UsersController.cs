@@ -9,6 +9,7 @@ using Microsoft.Extensions.Configuration;
 using WS.API.DTO.User;
 using WS.API.Extensions;
 using WS.API.Models;
+using WS.API.Service;
 using WS.API.Service.Implements;
 
 namespace WS.API.Controllers
@@ -20,12 +21,13 @@ namespace WS.API.Controllers
     public class UsersController : ControllerBase
     {
         private readonly IConfiguration _configuration;
-        private readonly UserService _service;
-        private readonly CommentService _commentService;
+        private readonly IUserService _service;
+        private readonly ICommentService _commentService;
         private readonly IWebHostEnvironment _env;
 
-        public UsersController(IConfiguration configuration, UserService service, 
-        CommentService commentService, IWebHostEnvironment env)
+        public UsersController(IConfiguration configuration, 
+            IUserService service, 
+            ICommentService commentService, IWebHostEnvironment env)
         {
             _configuration = configuration;
             _service = service;

@@ -48,11 +48,11 @@ namespace WS.API
                 return new MongoClient(settings.ConnectionString);
             });
             services.AddSingleton<ITopicService, TopicService>();
-            services.AddScoped<RoleService>();
-            services.AddScoped<CommentService>();
-            services.AddScoped<UserService>();
-            services.AddScoped<StoryService>();
-            services.AddScoped<ChapterService>();
+            services.AddSingleton<IRoleService, RoleService>();
+            services.AddSingleton<ICommentService, CommentService>();
+            services.AddSingleton<IUserService, UserService>();
+            services.AddSingleton<IStoryService, StoryService>();
+            services.AddSingleton<IChapterService, ChapterService>();
             
 
             //JSON Serializer

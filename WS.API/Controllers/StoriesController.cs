@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using WS.API.DTO.Story;
 using WS.API.Extensions;
+using WS.API.Service;
 using WS.API.Service.Implements;
 
 namespace WS.API.Controllers
@@ -11,9 +12,9 @@ namespace WS.API.Controllers
     [Route("stories")]
     public class StoriesController : ControllerBase
     {
-        private readonly  StoryService _service;
+        private readonly  IStoryService _service;
         
-        public StoriesController(StoryService service)
+        public StoriesController(IStoryService service)
         {
             _service = service;
         }

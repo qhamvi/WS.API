@@ -6,7 +6,7 @@ using WS.API.Models;
 
 namespace WS.API.Service
 {
-    public interface IRolesService
+    public interface IRoleService
     {
         Task<Role> GetRoleAsync(Guid idRole);
         Task<Role> GetRoleExistAsync(RoleRequest request);

@@ -4,6 +4,7 @@ using Microsoft.Extensions.Logging;
 using System;
 using System.Threading.Tasks;
 using WS.API.DTO.Chapter;
+using WS.API.Service;
 using WS.API.Service.Implements;
 
 namespace WS.API.Controllers
@@ -12,9 +13,9 @@ namespace WS.API.Controllers
     [ApiController]
     public class ChaptersController : ControllerBase
     {
-        private readonly ChapterService _service;
+        private readonly IChapterService _service;
         private readonly ILogger<ChaptersController> _logger;
-        public ChaptersController(ChapterService service, ILogger<ChaptersController> logger)
+        public ChaptersController(IChapterService service, ILogger<ChaptersController> logger)
         {
             _service = service;
             _logger = logger;

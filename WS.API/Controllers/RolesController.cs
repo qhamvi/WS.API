@@ -8,6 +8,7 @@ using WS.API.DTO.Response;
 using WS.API.DTO.Role;
 using WS.API.Extensions;
 using WS.API.Models;
+using WS.API.Service;
 using WS.API.Service.Implements;
 
 namespace WS.API.Controllers
@@ -17,8 +18,8 @@ namespace WS.API.Controllers
     [Route("roles")]
     public class RolesController : ControllerBase
     {
-        private readonly RoleService _service;
-        public RolesController(RoleService service)
+        private readonly IRoleService _service;
+        public RolesController(IRoleService service)
         {
             _service = service;
         }

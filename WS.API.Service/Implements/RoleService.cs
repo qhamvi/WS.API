@@ -8,7 +8,7 @@ using WS.API.Models;
 
 namespace WS.API.Service.Implements
 {
-    public class RoleService : IRolesService
+    public class RoleService : IRoleService
     {
         private const string _databaseName = "webstory";
         private const string _collectionName = "roles";

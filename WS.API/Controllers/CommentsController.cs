@@ -9,6 +9,7 @@ using WS.API.DTO.Comment;
 using WS.API.DTO.Response;
 using WS.API.Extensions;
 using WS.API.Models;
+using WS.API.Service;
 using WS.API.Service.Implements;
 
 namespace WS.API.Controllers
@@ -17,8 +18,8 @@ namespace WS.API.Controllers
     [Route("comments")]
     public class CommentsController : ControllerBase
     {
-        private readonly CommentService _service;
-        public CommentsController(CommentService service)
+        private readonly ICommentService _service;
+        public CommentsController(ICommentService service)
         {
             _service = service;
         }
