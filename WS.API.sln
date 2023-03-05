@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WS.API.Service", "WS.API.Se
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WS.API.Models", "WS.API.Models\WS.API.Models.csproj", "{21120407-D5CD-44AC-A9E7-F89F0C72D08C}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WS.API.Test", "WS.API.Test\WS.API.Test.csproj", "{D07E5EC5-8DAA-4F0D-9E1E-E90C72313454}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{21120407-D5CD-44AC-A9E7-F89F0C72D08C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{21120407-D5CD-44AC-A9E7-F89F0C72D08C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{21120407-D5CD-44AC-A9E7-F89F0C72D08C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D07E5EC5-8DAA-4F0D-9E1E-E90C72313454}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D07E5EC5-8DAA-4F0D-9E1E-E90C72313454}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D07E5EC5-8DAA-4F0D-9E1E-E90C72313454}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D07E5EC5-8DAA-4F0D-9E1E-E90C72313454}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
