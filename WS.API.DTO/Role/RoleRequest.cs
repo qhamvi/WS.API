@@ -2,6 +2,6 @@
 {
     public class RoleRequest
     {
-        public string NameRole { get; init; }
+        public string NameRole { get; set; }
     }
 }
