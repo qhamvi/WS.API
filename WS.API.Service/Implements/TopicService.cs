@@ -1,9 +1,13 @@
-﻿using MongoDB.Bson;
+﻿using Bogus;
+using MongoDB.Bson;
 using MongoDB.Driver;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
+using WS.API.DTO;
 using WS.API.DTO.Topic;
+using WS.API.Extensions;
 using WS.API.Models;
 
 namespace WS.API.Service.Implements
@@ -30,6 +34,15 @@ namespace WS.API.Service.Implements
                 Id = Guid.NewGuid(),
                 NameTopic = request.NameTopic
             };
+            //var faker = new Faker("en");
+            //var topics = Enumerable.Range(1, 100000).Select(v => faker.Company.CompanyName()).ToList();
+            //List<Topic> topics1 = topics.Select(v => new Topic()
+            //{
+            //    Id = Guid.NewGuid(),
+            //    NameTopic = v
+            //}).ToList();
+            //await _topicsCollection.InsertManyAsync(topics1);
+
             await _topicsCollection.InsertOneAsync(topic);
         }
 
@@ -54,12 +67,29 @@ namespace WS.API.Service.Implements
 
         public async Task<IEnumerable<Topic>> GetTopicsAsync()
         {
-            return await _topicsCollection.Find(new BsonDocument()).ToListAsync();
+            var x = await _topicsCollection.Find(new BsonDocument()).Limit(10)
+            .ToListAsync();
+            return x;
         }
 
-        public Task<GetListTopicResponse> GetTopicsAsync(GetListTopicRequest request)
+        public async Task<GetListTopicResponse> GetTopicsAsync(GetListTopicRequest request)
         {
-            throw new NotImplementedException();
+            request.Page = request.Page is 0 ? 1 : request.Page;
+            request.PageSize = request.PageSize is 0 ? 10 : request.PageSize;
+            long count = await _topicsCollection.CountAsync(Builders<Topic>.Filter.Empty, null);
+
+            var topics = await _topicsCollection.Find(new BsonDocument())
+                .Limit(request.PageSize)
+                .Skip((request.Page -1)* request.PageSize)
+                .ToListAsync();
+            GetListTopicResponse response = new()
+            {
+                Count = count,
+                Results = topics.Select(v => v.AsTopicDto()).ToList(),
+                Page = request.Page,
+                PageSize = request.PageSize
+            };
+            return response;
         }
 
         public async Task UpdateTopicAsync(Topic topic)

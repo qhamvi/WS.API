@@ -12,9 +12,5 @@ namespace WS.API.DTO.Topic
 
         public int PageSize { get; set; }
 
-        public bool? IsAscSorting { get; set; }
-
-        public string? Sort { get; set; }
-
     }
 }

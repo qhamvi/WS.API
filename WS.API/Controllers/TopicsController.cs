@@ -25,12 +25,19 @@ namespace WS.API.Controllers
 
         //GET /topics
         //[HttpGet]
-        //public async Task<ActionResult<GetListTopicResponse>> GetTopics(GetListTopicRequest request)
+        //public async Task<IEnumerable<TopicResponse>> GetTopics()
         //{
-        //    var topics = (await _service.GetTopicsAsync())
-        //                .Select(topic => topic.AsTopicDto());
-        //    return topics;
+        //   var topics = (await _service.GetTopicsAsync())
+        //               .Select(topic => topic.AsTopicDto());
+        //   return topics;
         //}
+        [HttpGet]
+        public async Task<GetListTopicResponse> GetTopics([FromQuery] GetListTopicRequest request)
+        {
+           var topics = await _service.GetTopicsAsync(request);
+           
+           return topics;
+        }
 
         //GET /topics/{id}
         [HttpGet("{idTopic}")]

@@ -9,7 +9,7 @@ namespace WS.API.DTO.Response
     {
         public int Page { get; set; }
         public int PageSize { get; set; }
-        public int Count { get; set; }
+        public long Count { get; set; }
         public List<T> Results { get; set; }
     }
 }
